@@ -1,0 +1,22 @@
+{
+  "name": "monitor-dash-address",
+  "version": "1.0.0",
+  "description": "script to monitor a Dash address for activity and display it onscreen",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "parcel src/index.js src/styles.css src/index.html",
+    "build": "npm run clean && parcel build src/index.js src/styles.css src/index.html  --public-url replacethiswithadot && sed -i \"s/replacethiswithadot/./g\" dist/index.html",
+    "clean": "rimraf ./dist/",
+    "deploy": "npm run clean && npm run build && git-directory-deploy --directory dist/"
+  },
+  "author": "Joshua Seigler",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "git-directory-deploy": "^1.5.1",
+    "rimraf": "^3.0.1"
+  }
+}
