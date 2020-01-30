@@ -16,4 +16,16 @@ In an HTML page, add this to the `<head>`:
 <div data-dash-address-watch="XmGw5qrhtJcmp3qebCDg9aLZH4ugraeakx"></div>
 ```
 
+You may prefer to save these JS and CSS files and host them locally instead,
+which should work fine. You can also omit the stylesheet and style the component
+yourself. The structure is:
+
+```html
+<div data-dash-address-watch="XmGw5qrhtJcmp3qebCDg9aLZH4ugraeakx">
+  <div class="dash-address-watch-label">XmGw5qrhtJcmp3qebCDg9aLZH4ugraeakx</div>
+  <div class="dash-address-watch-status">Watching...</div>
+  <div class="dash-address-watch-log"></div>
+</div>
+```
+
 ## [Demo](https://seigler.github.io/monitor-dash-address/)
